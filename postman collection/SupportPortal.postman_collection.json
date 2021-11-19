@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "781becbe-87a9-4032-8145-f97827de5857",
+		"name": "SupportPortal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"johnDoe@gmail.com\",\n    \"username\": \"John\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"king\",\n    \"password\": \"I5Xqz8HNPL\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find/{user}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/find/arjunzala",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"find",
+						"arjunzala"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiamV0dCIsImlzcyI6IkdldCBBcnJheXMsIExMQyIsImV4cCI6MTYzNzYwMDEyMywiaWF0IjoxNjM3MTY4MTIzLCJhdXRob3JpdGllcyI6WyJ1c2VyOnJlYWQiXX0.0hhyt5WFiJsMBGxHUjq3XMg0JWUqKmAPhrT3hzPGMeOfsJPhSsdpbzS2aZLmTTdDXDLrn6wiZvx8icfd6WNg_Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Morty",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Ray",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Morty",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mray@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ROLE_USER",
+							"type": "text"
+						},
+						{
+							"key": "isActive",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "isNonLocked",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/C:/Users/azala/Desktop/morty.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/updateProfileImage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiamV0dCIsImlzcyI6IkdldCBBcnJheXMsIExMQyIsImV4cCI6MTYzNzYwMDEyMywiaWF0IjoxNjM3MTY4MTIzLCJhdXRob3JpdGllcyI6WyJ1c2VyOnJlYWQiXX0.0hhyt5WFiJsMBGxHUjq3XMg0JWUqKmAPhrT3hzPGMeOfsJPhSsdpbzS2aZLmTTdDXDLrn6wiZvx8icfd6WNg_Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Morty",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Ray",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Morty",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mray@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ROLE_USER",
+							"type": "text"
+						},
+						{
+							"key": "isActive",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "isNonLocked",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/C:/Users/azala/Desktop/morty.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiamV0dCIsImlzcyI6IkdldCBBcnJheXMsIExMQyIsImV4cCI6MTYzNzYwMDEyMywiaWF0IjoxNjM3MTY4MTIzLCJhdXRob3JpdGllcyI6WyJ1c2VyOnJlYWQiXX0.0hhyt5WFiJsMBGxHUjq3XMg0JWUqKmAPhrT3hzPGMeOfsJPhSsdpbzS2aZLmTTdDXDLrn6wiZvx8icfd6WNg_Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Morty",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Ray",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Morty",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mray@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ROLE_USER",
+							"type": "text"
+						},
+						{
+							"key": "isActive",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "isNonLocked",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "profileImage",
+							"type": "file",
+							"src": "/C:/Users/azala/Desktop/morty.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiamV0dCIsImlzcyI6IkdldCBBcnJheXMsIExMQyIsImV4cCI6MTYzNzYwMDEyMywiaWF0IjoxNjM3MTY4MTIzLCJhdXRob3JpdGllcyI6WyJ1c2VyOnJlYWQiXX0.0hhyt5WFiJsMBGxHUjq3XMg0JWUqKmAPhrT3hzPGMeOfsJPhSsdpbzS2aZLmTTdDXDLrn6wiZvx8icfd6WNg_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/user/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/resetpassword/{mail}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiamV0dCIsImlzcyI6IkdldCBBcnJheXMsIExMQyIsImV4cCI6MTYzNzYwMDEyMywiaWF0IjoxNjM3MTY4MTIzLCJhdXRob3JpdGllcyI6WyJ1c2VyOnJlYWQiXX0.0hhyt5WFiJsMBGxHUjq3XMg0JWUqKmAPhrT3hzPGMeOfsJPhSsdpbzS2aZLmTTdDXDLrn6wiZvx8icfd6WNg_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/user/resetpassword/azala008@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"resetpassword",
+						"azala008@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delete/{username}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiamV0dCIsImlzcyI6IkdldCBBcnJheXMsIExMQyIsImV4cCI6MTYzNzYwMDEyMywiaWF0IjoxNjM3MTY4MTIzLCJhdXRob3JpdGllcyI6WyJ1c2VyOnJlYWQiXX0.0hhyt5WFiJsMBGxHUjq3XMg0JWUqKmAPhrT3hzPGMeOfsJPhSsdpbzS2aZLmTTdDXDLrn6wiZvx8icfd6WNg_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/user/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/image/Morty/Morty.jpg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user/image/Morty/Morty.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"image",
+						"Morty",
+						"Morty.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
