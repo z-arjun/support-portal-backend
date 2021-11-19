@@ -1,2 +1,2 @@
-# support portal(backend
+# support portal (backend using SpringBoot)
  
