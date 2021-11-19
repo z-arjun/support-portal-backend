@@ -2,8 +2,8 @@ package com.example.supportportal.constant;
 
 public class EmailConstant {
     public static final String SIMPLE_MAIL_TRANSFER_PROTOCOL = "smtps";
-    public static final String USERNAME = "streamingid08@gmail.com";
-    public static final String PASSWORD = "Ilovemymom@123";
+    public static final String USERNAME = "xxxxxxxxxx@gmail.com";
+    public static final String PASSWORD = "xxxxxxxxxxx";
     public static final String FROM_EMAIL = "support@arjuncodes.com";
     public static final String CC_EMAIL = "";
     public static final String EMAIL_SUBJECT = "Support Portal, LLC - New Password";
